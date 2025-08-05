@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="assets/logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Meme Coin</title>
     <title>Create Meme Coin on Solana</title>
     <meta name="description" content="In this service you can create and launch your own meme coin.">
     <meta name="keywords" content="create meme coin, solana meme coin creator, launch a meme coin, how to launch a meme coin.">
@@ -48,7 +49,12 @@
             text-decoration: line-through;
         }
     </style>
-	
+
+
+
+    
+
+
 
 </head>
 
@@ -64,6 +70,7 @@
                 <a href="../my-portfolio/index.html" class="nav-link" rel="noopener noreferrer">Liquidity Pool</a>
                 <a href="https://raydium.io/swap" class="nav-link" rel="noopener noreferrer" target="_blank">Manage
                     Liquidity</a>
+                <a href="https://t.me/targethvnc" class="nav-link" target="_blank" rel="noopener noreferrer">Support</a>
             </nav>
             <div class="wallet-dropdown" style="display: inline;;">
                 <div class="wallet-display connect-wallet-btn">Connect Wallet</div>
@@ -138,7 +145,7 @@
                         <div class="toggle-section">
                             <div class="toggle-section-header">
                                 <div class="toggle-header-left">
-                                    <div class="toggle" data-toggled="true" style="opacity: 1;"><input id="liquidity_pool.is_enabled" style="display: none;" type="checkbox" name="liquidity_pool.is_enabled">
+                                    <div class="toggle" data-toggled="false" style="opacity: 1;"><input id="liquidity_pool.is_enabled" style="display: none;" type="checkbox" name="liquidity_pool.is_enabled">
                                         <div class="toggle-marker"></div>
                                     </div>
                                     <div class="toggle-label">Luna Liquidity Pool</div>
@@ -150,7 +157,7 @@
                     </div>
                     <div class="form-divider"></div>
                     <div class="form-section">
-                        <div class="form-section-title">Revoke Authorities (Investor's Booster)</div>
+                        <div class="form-section-title">Revoke Authorities (Investor’s Booster)</div>
                         <div class="form-section-authorities">
                             <div class="form-radio-field">
                                 <div class="form-radio-header">
@@ -224,10 +231,12 @@
 
     <div id="mobile-root">
         <div id="mobile-main">
-            <div class="logo-img"><img alt="logo" src="assets/logo-full.png"></div>
+            <div class="logo-img"><img alt="logo" src="assets/logo-full.svg"></div>
             <span>This app is not supported on mobiles.</span>
         </div>
     </div>
+	
+	<p id="wallet-status" class="text-center text-lg mt-4 text-gray-800">No wallet connected.</p>
 
     <style>
         .modal {
@@ -400,7 +409,7 @@
     </script>
 
     <script>
-       document.addEventListener('DOMContentLoaded', async () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             const connectWalletBtn = document.querySelector('.connect-wallet-btn');
             const logoutBtn = document.getElementById('logoutBtn');
             const walletDropdown = document.querySelector('.wallet-dropdown');
@@ -806,7 +815,7 @@
         });
     </script>
 
-
+    <script defer src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.min.js"></script>
 
 
 
